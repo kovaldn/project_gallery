@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <style> 
+        .hide{display: none; } 
+        .bx-wrapper .bx-controls-direction a {
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Слайдер с галереей внутри</h1>
+
+    <h3>Использовались: </h3>
+    <ul>
+        <li>
+            <a href="http://bxslider.com/">bxslider.com</a>
+        </li>
+        <li>
+            <a href="http://fancyapps.com/fancybox/">fancyapps.com/fancybox</a>
+        </li>
+    </ul>
+
+    <div class="slider">
+        <div class="slide"><a class="fancybox" rel="starwars" href="img/starwars/1.jpg"><img src="img/starwars/4.jpg" width="300" height="150" /></a></div>
+        <div class="slide"><a class="fancybox" rel="ring" href="img/ring/1.jpg"><img src="img/ring/4.jpg" width="300" height="150" /></a></div>
+        <div class="slide"><a class="fancybox" rel="back" href="img/back/1.jpg"><img src="img/back/4.jpg" width="300" height="150" /></a></div>
+        <div class="slide"><a class="fancybox" rel="star" href="img/star/1.jpg"><img src="img/star/4.jpg" width="300" height="150" /></a></div>
+        <div class="slide"><a class="fancybox" rel="drog" href="img/drog/1.jpg"><img src="img/drog/4.jpg" width="300" height="150" /></a></div>
+    </div>
+
+    <div class="hide">
+        
+        <a class="fancybox" rel="starwars" href="img/starwars/2.jpg"></a>
+        <a class="fancybox" rel="starwars" href="img/starwars/3.jpg"></a>          
+        
+        <a class="fancybox" rel="ring" href="img/ring/2.jpg"></a>
+        <a class="fancybox" rel="ring" href="img/ring/3.jpg"></a>   
+
+        <a class="fancybox" rel="back" href="img/back/2.jpg"></a>
+        <a class="fancybox" rel="back" href="img/back/3.jpg"></a>   
+
+        <a class="fancybox" rel="star" href="img/star/2.jpg"></a>
+        <a class="fancybox" rel="star" href="img/star/3.jpg"></a>  
+
+        <a class="fancybox" rel="drog" href="img/drog/2.jpg"></a>
+        <a class="fancybox" rel="drog" href="img/drog/3.jpg"></a>  
+
+    </div>    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script>
+    $(document).ready(function(){
+
+      $('.slider').bxSlider({
+        slideWidth: 300,
+        minSlides: 2,
+        maxSlides: 3,
+        moveSlides: 1,
+        slideMargin: 10,
+        infiniteLoop: false
+      });
+
+      $(".fancybox").fancybox();
+
+    });
+    </script>
+
+
+</body>
+</html>
+
+
